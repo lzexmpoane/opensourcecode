@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!-- 代码的确不工整，emmmmm，也许是我的编辑器的问题吧（之前用的EditPlus，现在用的Sublime Text，再让我用EditPlus是不可能用的，这辈子都不会用EditPlus的（真香预警），Sublime Text比那破玩意好用dōu喽，用的个个都是人才，界面又好看，我qiāo喜欢用的喔！（嗯哼）） -->
+<head>
+	<link rel="icon" href="./favicon/favicon.png" type="image/x-icon">
+	<!-- 这玩意我自己画的，没有什么厚颜无耻的行为 -->
+	<meta charset="UTF-8">
+	<title>Open Source Code</title>
+	<style type="text/css">
+		html{
+			-webkit-filter: grayscale(0);
+		}
+	</style>
+	<style>
+		a{text-decoration:none}
+		a:hover{text-decoration:none}
+	</style>
+</head>
+<!-- #CDA776 -->
+<!-- <body bgcolor="#CDA776"> -->
+<body id="mainbody" background="./bg.jpg"
+style=" background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed;">
+	<div>
+		<h1 style="color:black;font-size:50px;text-align: center;margin: 0px; padding: 0px;">Open Source Code</h1>
+		<h3 id="version_" style="color:black;font-size:15px;text-align: center;">Open Source Code Version : v0.0&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Created by <a href="https://github.com/lzexmpoane" target="_blank" style="color: black;">lzexmpoane</a></h3>
+	</div>
+	<div id="ifr" style="display:block;">
+		<h1><div style="color:black;text-align:center;clear:both"><a href="./mainw.html" target="Window1">主页</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="./resource.html" target="Window1">资源
+		</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="./forum.html" target="Window1">论坛</a></div></h1>
+		<iframe src="./mainw.html" id="iframeContent" name="Window1" width="75%" height="2000" frameborder="0" scrolling="auto"></iframe>
+	</div>
+	<div id="qmj" style="display:none;">
+		<h1 style="font-size:60px;color: black;">清明节，为所有的英雄致敬！</h1>
+		<h1 style="font-size:60px;color: black;">OpenSourceCode 停止提供所有资源！</h1>
+		<h1 style="color: black;text-align: right;">lzexmpoane&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+	</div>	
+	<style>
+		.a1 a{color:#999999}
+		body{text-align:center;color:#999999} 
+		footer{ background:#595959;padding:10px 0 10px 0}
+	</style>
+	<div class="a1">
+		<footer><a href="https://lzexmpoane.github.io/opensourcecode/" target="_blank">Open Source Code</a> - <a href="https://github.com/lzexmpoane" target="_blank">lzexmpoane</a></footer>
+		<footer>1929973351@qq.com - huloubo123@gmail.com</footer>
+	</div>
+	<footer id="cr">Create Date : 2020/3/3</footer>
+</body>
+<script type="text/javascript" src="./OSC.js"></script>
+<script type="text/javascript">
+	Logo();
+	Version=0.7;
+	document.getElementById('version_').innerHTML="Open Source Code Version : v"+Version+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Created by <a href=\"https://github.com/lzexmpoane\">lzexmpoane</a>";
+</script>
+<script type="text/javascript" src="./datething.js"></script>
+<script type="text/javascript">var Nope="Nope"</script>
+<script type="text/javascript">
+	function getQinMingJieDate() {
+		var fullYear;
+		d = new Date();
+		var month=d.getMonth()+1;
+		var day=d.getDate();
+		var date=month+" "+day;
+		fullYear = d.getFullYear();
+		var t=0;
+		//清明节的日期是不固定的，规律是：闰年开始的前2年是4月4日，闰年开始的第3年和第4年是4月5日
+		if(isLeapYear(fullYear) || isLeapYear(fullYear -1)){
+			if(date=="4 4")
+			{
+				document.getElementById('mainbody').background="./bgd.jpg";
+				document.getElementsByTagName('html')[0].style.WebkitFilter="grayscale(1)";
+				document.getElementById('qmj').style.display = "block";
+				document.getElementById('ifr').style.display = "none";
+			}
+			if(date=="4 5")
+			{
+				document.getElementById('mainbody').background="./bg.jpg";
+				document.getElementsByTagName('html')[0].style.WebkitFilter="grayscale(0)";
+				document.getElementById('qmj').style.display = "none";
+				document.getElementById('ifr').style.display = "block";
+			}
+		}
+		else{
+			if(date=="4 5")
+			{
+				document.getElementById('mainbody').background="./bgd.jpg";
+				document.getElementsByTagName('html')[0].style.WebkitFilter="grayscale(1)";
+				document.getElementById('qmj').style.display = "block";
+				document.getElementById('ifr').style.display = "none";
+			}
+			if(date=="4 4")
+			{
+				document.getElementById('mainbody').background="./bg.jpg";
+				document.getElementsByTagName('html')[0].style.WebkitFilter="grayscale(0)";
+				document.getElementById('qmj').style.display = "none";
+				document.getElementById('ifr').style.display = "block";
+			}
+		}
+	}
+	//判断是否是闰年
+	function isLeapYear (Year) {
+		if (((Year % 4)==0) && ((Year % 100)!=0) || ((Year % 400)==0)) {
+			return (true);
+		} else { return (false); }
+	}
+	setInterval("getQinMingJieDate();",10);
+</script>

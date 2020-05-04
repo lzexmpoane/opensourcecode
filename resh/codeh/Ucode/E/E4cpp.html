@@ -1,0 +1,7 @@
+<!DOCTYPE HTML>
+<head>
+        <meta charset="UTF-8">
+        <title>Open Source Code - 代码库</title>
+</head>
+<p><a href="#" onClick="javascript :history.back(-1);">返回</a><p>
+<font face="Courier New"><p>#include&lt;iostream&gt;</p><p>#include&lt;cstdio&gt;</p><p>using&nbspnamespace&nbspstd;</p><p>const&nbspint&nbspMAXN=10001;</p><p>int&nbspmain()</p><p>{</p><p>&nbsp&nbsp&nbsp&nbspint&nbspn,i,j;</p><p>&nbsp&nbsp&nbsp&nbspfloat&nbsptemp,a[MAXN];</p><p>&nbsp&nbsp&nbsp&nbspcin&gt;&gt;n;</p><p>&nbsp&nbsp&nbsp&nbspfor&nbsp(i=0;i&lt;n;i++)</p><p>&nbsp&nbsp&nbsp&nbspcin&gt;&gt;a[i];&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp//输入n个数</p><p>&nbsp&nbsp&nbsp&nbspfor(i=n-1;&nbspi&gt;=1;&nbspi--)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp//进行n-1轮冒泡</p><p>&nbsp&nbsp&nbsp&nbsp{&nbsp</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfor(j=0;&nbspj&lt;=i;&nbspj++)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp// 每轮进行i次的比较</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif(a[j]&gt;a[j+1])&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp//相邻两个元素 比较，若逆序就交换</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspswap(a[j],&nbspa[j+1]);&nbsp//交换</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p><p>&nbsp&nbsp&nbsp&nbsp}</p><p>&nbsp&nbsp&nbsp&nbspfor&nbsp(i=0;i&lt;n;i++)&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp//输出排序结果</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;a[i]&lt;&lt;&quot&nbsp&quot;;</p><p>&nbsp&nbsp&nbsp&nbspreturn&nbsp0;</p><p>}</p></font>
