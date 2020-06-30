@@ -9,7 +9,7 @@ function avtobv(av) {
     var xorr=177451812,addd=8728348608;
     av=parseInt(av,10);
     av=(av^xorr)+addd;
-    var bv=["B","V","1"," "," ","4"," ","1"," ","7"," "," "," "];
+    var bv=["b","v","1"," "," ","4"," ","1"," ","7"," "," "," "];
     for(var i=0;i<6;i++)
     {
         bv[s[i]]=code[Math.floor(av/Math.pow(58,i)%58)];
