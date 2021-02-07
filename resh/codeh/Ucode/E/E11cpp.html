@@ -1,7 +1,0 @@
-<!DOCTYPE HTML>
-<head>
-    <meta charset="UTF-8">
-    <title>Open Source Code - 代码库</title>
-</head>
-<p><a href="#" onClick="javascript :history.back(-1);">返回</a><p>
-<font face="Courier New"><p>#include&nbsp;&lt;iostream&gt;</p><p>#include&nbsp;&lt;cstdio&gt;</p><p>using&nbsp;namespace&nbsp;std;</p><p>typedef&nbsp;long&nbsp;long&nbsp;ll;</p><p>ll&nbsp;c[205][2],dp[10000];</p><p>ll&nbsp;n,m;</p><p>int&nbsp;main()</p><p>{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;cin&gt;&gt;m&gt;&gt;n;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;for(int&nbsp;i=1;i&lt;=n;i++)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cin&gt;&gt;c[i][0]&gt;&gt;c[i][1];</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;for(ll&nbsp;i=1;i&lt;=n;i++)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(ll&nbsp;j=c[i][0];j&lt;=m;j++)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dp[j]=max(dp[j],dp[j-c[i][0]]+c[i][1]);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;&quot;max=&quot;&lt;&lt;dp[m];</p><p>}</p><p></p></font>

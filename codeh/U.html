@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset="UTF-8">
+</head>
+<!-- 所有在题目中的代码使用<font face="Courier New"></font> -->
+<h1><div style="color:black;font-size:40px">Open Source Code - Code - 上传文件</div></h1>
+<p><a href="#" onClick="javascript :history.back(-1);">返回</a></p>
+<h3 style="color:#EE2C2C">提示：所有提交的代码、样例输出输入都将使用"Courier New"字体；本网站只支持Unicode编码，请自行转换；发送邮件后表示已同意开源；OpenSourceCode只允许上传一个文件，如果有多个文件可以在写一个文件里，多换几行，或者直接发一个压缩包；所有的代码上传需更改，可以重发一遍，会覆盖先前的代码，若文件名不一样，需要删除，请另外通知。</h3>
+<br>
+<h2>1、制作HTML文件（请使用Unicode编码）：</h2>
+<form>
+    <input type="file" id="btn_file" onchange="document.getElementById('updb').style.display='block';upload(document.getElementById('btn_file'))" />
+    <button id="updb" type="button" style="display: none;" onclick="SaveFAs()">下载制作后的HTML文件</button>
+    <p>&nbsp;</p>
+    <button id="nbpw" type="button" onclick="soiprw()">展开预览</button>
+    <br><p id="prewc">预览：</p><hr>
+    <p id="cantupd" style="display: none;">* 未选择文件</p>
+</form>
+<hr>
+<h2>2、上传HTML文件：</h2>
+<p>由于技术原因，我无法让文件直接上传到数据库，所以，请使用邮件的方式发送文件。</p>
+<p>在底部导航栏也有邮箱地址</p>
+<p>或者，你如果有想法可以实现让文件直接上传到数据库，也可以发邮件给我，我可以试试</p>
+<script type="text/javascript" src="./FileUpload.js"></script>
+<script type="text/javascript" src="./FileSaver.js"></script>
+<script type="text/javascript">
+    function SaveFAs()
+    {
+        var file = document.getElementById('btn_file').files[0];
+        var filename = file.name.split(".")[0];
+        var lang = file.name.split(".")[1];
+        var str = document.getElementById("cantupd").innerHTML;
+        var file = new File([str], filename + lang + ".html", {type: "text/plain;charset=utf-8"});
+        saveAs(file);
+    }
+    function soiprw()
+    {
+        if (document.getElementById("nbpw").innerHTML == "展开预览")
+        {
+            document.getElementById('cantupd').style.display='block';
+            document.getElementById("nbpw").innerHTML = "收起预览"
+        }
+        else
+        {
+            document.getElementById('cantupd').style.display='none';
+            document.getElementById("nbpw").innerHTML = "展开预览"
+        }
+    }
+</script>

@@ -1,7 +1,0 @@
-<!DOCTYPE HTML>
-<head>
-    <meta charset="UTF-8">
-    <title>Open Source Code - 代码库</title>
-</head>
-<p><a href="#" onClick="javascript :history.back(-1);">返回</a><p>
-<font face="Courier New"><p>#include&lt;cstdio&gt;</p><p>#include&lt;cstring&gt;</p><p>#include&lt;string&gt;</p><p>using&nbsp;namespace&nbsp;std;</p><p>int&nbsp;max(int&nbsp;a,int&nbsp;b){return&nbsp;a&gt;b?a:b;}</p><p>const&nbsp;int&nbsp;maxlen=201;</p><p>int&nbsp;c[maxlen][maxlen];</p><p>int&nbsp;n,i,j,l1,l2;</p><p>char&nbsp;x[201],y[201];</p><p>string&nbsp;z=&quot;&quot;;</p><p>int&nbsp;main()</p><p>{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;scanf(&quot;%s\n%s&quot;,&amp;x,&amp;y);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;l1=strlen(x);&nbsp;l2=strlen(y);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(i=1;&nbsp;i&lt;=l1;&nbsp;i++)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(j=1;&nbsp;j&lt;=l2;&nbsp;j++)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(x[i-1]==y[j-1])&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c[i][j]=c[i-1][j-1]+1;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c[i][j]=max(c[i-1][j],c[i][j-1]);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;printf(&quot;%d\n&quot;,c[l1][l2]);</p><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;</p><p>}</p><p></p></font>

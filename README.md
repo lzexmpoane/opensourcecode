@@ -1,8 +1,8 @@
 # **OpenSourceCode**
 > Written using markdown
 
->_**Note:This website is written in Chinese.)**_
+>_**Note:This website is written in Chinese.**_
 
-[Link of OpenSourceCode](https://lzexmpoane.github.io/opensourcecode/)
+[Link](https://lzexmpoane.github.io/opensourcecode/)
 
-_**Write by lzexmpoane in 2020.3**_
+_**Write by lzexmpoane in 2021.2**_
